@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="bg-[#ffffff] p-3 h-20 w-full flex items-center justify-between  shadow-md ">
+        <a href="" id="brand" class="flex items-center gap-3  ">
+            <img class="object-cover max-h-12 max-w-12" src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%200.png"  alt="Logo">
+            <span class="text-xl font-semibold" >ToDeskTop</span>
+        </a>
+        <div id="nav-menu" class=" w-2/4 hidden justify-around p-2 items-center md:flex ">
+            <a href="#" class="font-semibold text-lg hover:text-blue-600">Pricing</a>
+            <a href="#" class="font-semibold text-lg hover:text-blue-600">Docs</a>
+            <a href="#" class="font-semibold text-lg hover:text-blue-600">Changelog</a>
+            <a href="#" class="font-semibold text-lg hover:text-blue-600">Blogs</a>
+            <a href="#" class="font-semibold text-lg hover:text-blue-600">Login</a>
+        </div>
+        <button class="hidden items-center gap-3 border border-solid border-gray-200 p-3 rounded-xl hover:border-gray-500 md:flex ">
+            <img src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%201.svg" alt="">
+            <span class="font-semibold text-nowrap">Electron Developer</span>
+            <i class="ri-arrow-right-line text-lg"></i>
+        </button>
+        <button class="p-2 md:hidden" onclick="handleMenu()"><i class="ri-menu-line text-xl font-semibold "></i></button>
+
+       <div id="navdialog" class="bg-white hidden fixed z-10 inset-0 p-3 md:hidden">
+            <div id="nav-bar" class="flex items-center justify-between h-14">
+                  <a href="" id="brand" class="flex items-center gap-3  ">
+                     <img class="object-cover max-h-12 max-w-12" src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%200.png"  alt="Logo">
+                    <span class="text-xl font-semibold" >ToDeskTop</span>
+                    </a>
+                <button class="p-2 md:hidden" onclick="handleMenu()"><i class="ri-close-line text-xl font-semibold "></i></button>
+            </div>
+            <div id="menu" class="flex flex-col gap-4 p-3  ">
+                <a href="#" class=" w-full p-2 rounded-lg hover:bg-blue-200">Pricing</a>
+                <a href="#" class=" p-2 rounded-lg hover:bg-blue-200">Docs</a>
+                <a href="#" class=" p-2 rounded-lg hover:bg-blue-200">Changelog</a>
+                <a href="#" class=" p-2 rounded-lg hover:bg-blue-200">Blogs</a>
+                <a href="#" class=" p-2 rounded-lg hover:bg-blue-200">Login</a>
+            </div>
+            <button class=" flex w-full items-center gap-2 border-t border-solid border-gray-500 p-3 pt-6 ">
+                <img src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%201.svg" alt="">
+                <span class=" text-nowrap">Electron Developer</span>
+            </button>
+       </div>
+
+
+    </nav>
+
+    <!--hero container-->
+<div id="hero" class="min-h-screen bg-gradient-to-b from-purple-50 via-orange-50 to-transparent overflow-hidden">
+           <div id="hero-container" class="p-6 flex flex-col  max-w-4xl mx-auto pt-24 gap-5 sm:max-w-2xl sm:items-center  ">
+          <div id="version-text" class="flex p-3 items-center gap-4 w-fit border solid border-[#FDE047] rounded-lg hover:shadow-lg transform hover:scale-[22px] md:hover:scale-125 transition duration-300 sm:p-1 md:mb-6">
+            <div class="w-2 h-2 rounded-[50%] bg-[#FACC15]"></div>
+            <p><span class="text-[#CA8A04]">v0.21.1:</span><span class="text-[#854D0E] font-semibold">Find-in-page bug fixes</span></p>
+            <i class="ri-arrow-right-line text-[#D4AC81] font-bold"></i>
+          </div>
+
+
+          <div class=" hidden md:flex md:gap-8 ">
+            <div>
+                <i class="ri-file-code-line"></i>
+                <span class="text-gray-500 font-medium">Code Optional</span>
+            </div>
+
+            <div>
+                <i class="ri-dropbox-line"></i>
+                <span class="text-gray-500 font-medium">Drag & drop builder</span>
+            </div>
+
+            <div>
+                <i class="ri-macbook-line"></i>
+                <span class="text-gray-500 font-medium">Window,Mac,Lixu</span>
+            </div>
+    
+        </div>
+
+
+          <h1 class="text-4xl font-medium mt-6 mb-4 sm:text-6xl sm:text-center sm:mb-12">Web app to desktop app in minutes</h1>
+
+
+          <p class="text-lg font-medium mb-6 sm:text-2xl sm:mb-10 sm:text-center">Take your web app codebase and transform it into a cross platform desktop app with native functionality</p>
+
+          <div class="flex flex-col gap-3 sm:p-2   sm:flex-row sm:gap-6 ">
+            <button class="p-3 bg-blue-700 rounded-xl font-medium  text-white">Download Now</button>
+            <button class="p-3 bg-white rounded-xl font-medium border border-solid border-gray-300  ">Read Docs</button>
+          </div>
+    
+           </div>
+           <!--Companies-container-->
+           <div id="companies-container" class="mt-6 flex flex-col gap-12 ">
+            <div id="companies-title" class="flex gap-3 justify-center items-center ">
+                <img src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%202.svg" class="translate-y-2" alt="">
+                <span class="font-semibold">APPS POWERED BY TODESKTOP</span>
+                <img src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%202.svg" class="transform scale-x-[-1] translate-y-2" alt="">
+            </div>
+            <div id="comapnies-line-group"class=" flex flex-col gap-4 md:gap-8">
+                <div id="line1" class="flex gap-4 w-screen -translate-x-48 transition-all ease-linear">
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 0.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 10.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 11.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 12.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 13.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 14.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 15.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 16.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 13.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 14.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 15.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 16.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 13.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 14.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 15.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 16.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 13.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 14.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 15.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 16.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    
+                </div>
+
+                <div id="line2" class="flex gap-4 w-screen -translate-x-36 transition-all ease-linear">
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 13.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 14.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 15.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 16.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 17.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 18.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 19.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 20.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 13.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 14.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 15.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 16.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 13.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 14.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 15.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 16.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                </div>
+
+
+                <div id="line3" class="flex gap-4 w-screen -translate-x-48 transition-all ease-linear sm:hidden">
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 17.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 18.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 19.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 20.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 17.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 18.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 19.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 20.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 17.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 18.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 19.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 20.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 13.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 14.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 15.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center min-h-24 min-w-24 justify-center bg-white rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 md:w-16 md:h-16" src="./assest/asset 16.png" alt="">
+                        <span class="text-[12px] font-medium md:text-[16px] ">Convy</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>    
+    
+<!--step-by-step-->
+
+<div id="steps" class="flex  flex-col gap-6  px-6 py-12">
+    <h1 class="text-5xl font-medium text-gray-900 mb-16 md:mt-16">How it works</h1>
+    <div id="step1" class="px-4 py-12 flex flex-col justify-between gap-8   border border-solid border-gray-300 shadow-md rounded-xl md:flex-row md:px-8  md:py-16">
+       <div class="flex flex-col  gap-8 md:w-[50%]"> 
+        <span class="text-[#854D0E] border solid border-[#FDE047] rounded-lg  bg-[#FEFCE8] font-medium py-2 px-3 w-fit ">Step 1</span>
+        <h1 class="text-4xl font-medium text-gray-900 ">Bootstrap straight from your web app</h1>
+        <p class="text-xl text-justify text-gray-950 font-normal leading-[36px] ">Copy and paste your web app url into ToDesktop.Customise your app design,app icon and window frame UI with no code.</p>
+        <div id="lists" class="  flex  justify-between">
+            <ul class="flex flex-col gap-2">
+                <li class="text-xl font-thin">
+                <i class="ri-check-line  text-2xl"></i>
+                Multiple window</li>
+                <li class="text-xl font-thin">
+                    <i class="ri-check-line  text-2xl"></i>
+                    Multiple window</li>
+                <li class="text-xl font-thin">
+                    <i class="ri-check-line  text-2xl"></i>
+                    Multiple window</li>
+            </ul>
+            <ul class="flex flex-col gap-2">
+                <li class="text-xl font-thin">
+                    <i class="ri-check-line  text-2xl"></i>
+                    Multiple window</li>
+                <li class="text-xl font-thin">
+                    <i class="ri-check-line  text-2xl"></i>
+                    Multiple window</li>
+                <li class="text-xl font-thin">
+                    <i class="ri-check-line  text-2xl"></i>
+                    Multiple window</li>
+            </ul>
+          </div>
+       </div>
+       <img  src="./assest/asset 66.svg" alt="">
+    </div>
+
+    <div id="step2" class="px-4 py-12 flex flex-col gap-8   border border-solid border-gray-300 shadow-md rounded-xl md:flex-row md:px-8 md:py-16 justify-between">
+        <div class="flex flex-col gap-8 md:w-[50%]"> 
+         <span class="text-[#854D0E] border solid border-[#FDE047] rounded-lg  bg-[#FEFCE8] font-medium py-2 px-3 w-fit ">Step 2</span>
+         <h1 class="text-4xl font-medium text-gray-900">Bootstrap straight from your web app</h1>
+         <p class="text-xl text-justify text-gray-950 font-normal leading-[36px] ">Copy and paste your web app url into ToDesktop.Customise your app design,app icon and window frame UI with no code.</p>
+         <div id="lists" class="  flex  justify-between">
+             <ul class="flex flex-col gap-2">
+                 <li class="text-xl font-thin">
+                 <i class="ri-check-line  text-2xl"></i>
+                 Multiple window</li>
+                 <li class="text-xl font-thin">
+                     <i class="ri-check-line  text-2xl"></i>
+                     Multiple window</li>
+                 <li class="text-xl font-thin">
+                     <i class="ri-check-line  text-2xl"></i>
+                     Multiple window</li>
+             </ul>
+             <ul class="flex flex-col gap-2">
+                 <li class="text-xl font-thin">
+                     <i class="ri-check-line  text-2xl"></i>
+                     Multiple window</li>
+                 <li class="text-xl font-thin">
+                     <i class="ri-check-line  text-2xl"></i>
+                     Multiple window</li>
+                 <li class="text-xl font-thin">
+                     <i class="ri-check-line  text-2xl"></i>
+                     Multiple window</li>
+             </ul>
+           </div>
+        </div>
+        <img src="./assest/asset 66.svg" alt="">
+     </div>
+
+
+     <div id="step3" class="px-4 py-12 flex flex-col gap-8   border border-solid border-gray-300 shadow-md rounded-xl md:flex-row md:px-8 md:py-16 justify-between">
+        <div class="flex flex-col gap-8 md:w-[50%]"> 
+         <span class="text-[#854D0E] border solid border-[#FDE047] rounded-lg  bg-[#FEFCE8] font-medium py-2 px-3 w-fit ">Step 3</span>
+         <h1 class="text-4xl font-medium text-gray-900">Bootstrap straight from your web app</h1>
+         <p class="text-xl text-justify text-gray-950 font-normal leading-[36px] ">Copy and paste your web app url into ToDesktop.Customise your app design,app icon and window frame UI with no code.</p>
+         <div id="lists" class="  flex  justify-between">
+             <ul class="flex flex-col gap-2">
+                 <li class="text-xl font-thin">
+                 <i class="ri-check-line  text-2xl"></i>
+                 Multiple window</li>
+                 <li class="text-xl font-thin">
+                     <i class="ri-check-line  text-2xl"></i>
+                     Multiple window</li>
+                 <li class="text-xl font-thin">
+                     <i class="ri-check-line  text-2xl"></i>
+                     Multiple window</li>
+             </ul>
+             <ul class="flex flex-col gap-2">
+                 <li class="text-xl font-thin">
+                     <i class="ri-check-line  text-2xl"></i>
+                     Multiple window</li>
+                 <li class="text-xl font-thin">
+                     <i class="ri-check-line  text-2xl"></i>
+                     Multiple window</li>
+                 <li class="text-xl font-thin">
+                     <i class="ri-check-line  text-2xl"></i>
+                     Multiple window</li>
+             </ul>
+           </div>
+        </div>
+        <img src="./assest/asset 66.svg" alt="">
+     </div>
+</div>
+
+
+<!--Bento grid-->
+
+<div id="bento-grid" class="  mt-5 px-8 py-12">
+    <h1 class="text-4xl font-semibold w-full mb-10">Todesktop handles the details</h1>
+    <div id="layouts" class="flex flex-col gap-4 " >
+       <div class="flex flex-col gap-4 md:flex-row max-w-7xl mx-auto">
+        <div id="layout-1" class="flex flex-col gap-4 py-4 px-6 border border-solid border-gray-300 rounded-xl items-center shadow-md md:py-16 hover:bg-gradient-to-br from-purple-50 to-orange-50  ">
+            <h1 class="text-2xl text-cente font-semibold text-gray-900 md:text-xl">Native Notifictions</h1>
+            <img class=""  src="./assest/asset 37.png" alt="">
+        </div>
+        <div id="layout-2" class="flex flex-col gap-4 py-4 px-6 border border-solid border-gray-300 rounded-xl items-center shadow-md hover:bg-gradient-to-br from-purple-50 to-orange-50 ">
+            <h1 class="text-2xl text-center font-semibold text-gray-900 ">Native Notifictions</h1>
+            <p class="text-xl text-center">We'll ensure the underlying browser is up to date and deliver performance improvements,security patches, & additional features.</p>
+            <img class=""  src="./assest/asset 38.png" alt="">
+        </div>
+        <div id="layout-3" class="flex flex-col gap-4 py-4 px-6 border border-solid border-gray-300 rounded-xl items-center shadow-md md:py-16 hover:bg-gradient-to-br from-purple-50 to-orange-50  ">
+            <h1 class="text-2xl md:text-xl text-center font-semibold text-gray-900 ">Native Notifictions</h1>
+            <img class=""  src="./assest/asset 39.png" alt="">
+        </div>
+       </div>
+        <div class="flex flex-col gap-4 md:flex-row max-w-7xl mx-auto">
+            <div id="layout-4" class="flex flex-col gap-4 py-4 px-6 border border-solid border-gray-300 rounded-xl items-center shadow-md hover:bg-gradient-to-br from-purple-50 to-orange-50 ">
+                <h1 class="text-2xl text-center font-semibold text-gray-900 ">Native Notifictions</h1>
+                <p class="text-xl text-center">We'll ensure the underlying browser is up to date and deliver performance improvements,security patches, & additional features.</p>
+                <img class=""  src="./assest/asset 40.png" alt="">
+            </div>
+            
+            <div id="layout-5" class="flex flex-col gap-4 py-4 px-6 border border-solid border-gray-300 rounded-xl items-center shadow-md hover:bg-gradient-to-br from-purple-50 to-orange-50 ">
+                <h1 class="text-2xl text-center font-semibold text-gray-900 ">Native Notifictions</h1>
+                <p class="text-xl text-center">We'll ensure the underlying browser is up to date and deliver performance improvements,security patches, & additional features.</p>
+                <img class=""  src="./assest/asset 38.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--marque-->
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
